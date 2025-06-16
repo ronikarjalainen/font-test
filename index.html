@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Font test: Helvetica Neue Black Condensed</title>
+	<style>
+@font-face {
+	font-family: 'hnbc';
+	url('helvetica-neue-black-condensed.woff2') format("woff2"),
+	url('helvetica-neue-black-condensed.ttf') format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'hnbc oblique';
+	url('helvetica-neue-black-condensed.woff2') format("woff2"),
+	url('helvetica-neue-black-condensed.ttf') format("truetype");
+	font-style: oblique;
+	font-weight: normal;
+}
+body {
+	font-family: 'hnbc';
+}
+div {
+	border-style: dotted;
+	width: 400px;
+}
+.italic
+{
+	font-style: italic;
+}
+.oblique
+{
+	font-synthesis-style: auto;
+	font-style: oblique;
+}
+.obliquep45
+{
+	font-synthesis-style: auto;
+	font-style: oblique 45deg;
+}
+.obliquem45
+{
+	font-synthesis-style: auto;
+	font-style: oblique -45deg;
+}
+.obliquehnbc
+{
+	font-family: 'hnbc oblique';
+}
+	</style>
+</head>
+<body>
+	<h1>Font test: Helvetica Neue Black Condensed</h1>
+	<div><p>This is normal text</p></div>
+	<div><p class="italic">This is italic text</p></div>
+	<div><p class="oblique">This is oblique text</p></div>
+	<div><p class="obliquep45">This is oblique text with +45 degree slant</p></div>
+	<div><p class="obliquem45">This is oblique text with -45 degree slant</p></div>
+	<div><p class="obliquehnbc">This is oblique text with mere font-family</p></div>
+</body>
+</html> 
