@@ -1,18 +1,3 @@
-I searched for some bug reports myself and found some... stuff.
+"notes": "The provided angle has little effect. Angles from 14 to 90 are shown with a slant of 14 degrees, like `font-style: oblique` without a provided angle. Angles from -90 to 13 are generally shown without slant, like `font-style: normal`. In some situations, like with a vertical `writing-mode` being used, a negative angle does produce a slant."
 
-- An issue created based on CSS Working Group's decision to disallow fallback from oblique to italic and to synthesize oblique when requested: https://issues.chromium.org/issues/393389580
-- Issue about slanting glyphs to the left not working: https://issues.chromium.org/issues/40065409 with w3 tests page, where Gecko passes two of the three tests, while Blink and Webkit fail: http://w3.org/International/i18n-tests/results/int-letterforms.html
-- Also a bug report Chrome behaves even more weirdly: https://issues.chromium.org/issues/40788851
-
-On the test page provided in that issue: https://output.jsbin.com/juyawoh if I tweak the degrees of the property relevant to the `font-style: oblique -15deg` box followingly:
- - the default value of -15 that's set on the page slants all characters to the left, as well as does any negative value from -90 to -1
- - value of 0 produces normal text - none of the latin characters, arabic numerals and logograms are slanted in any way
- - values from 1 to 13 only slant the latin characters and arabic numerals
- - values of exactly 14 slants all of the characters
- - values from 15 to 90 slant none of the characters
-
-The angle of the slant doesn't vary, it's just left, right or none. In Firefox the logograms are slanted to the degree, while latin characters and arabic numerals seem to become italics.
-
-Anyway... For Chrome and Safari, is it really a partial implementation even? Seems to me they check the angle and make it either `font-style: normal` or `font-style: italic` based on the provided degree. I mean, sure, it doesn't break, but that's nowhere near the intended behaviour.
-
-Also, I'm becoming less and less sure that the people who decide how CSS don't know what they're doing. Oblique and italic are supposed to be two distinct things. https://en.wikipedia.org/wiki/Oblique_type
+"notes": "The provided angle has little effect. Angles from 14 to 90 are shown with a slant of 14 degrees, like `font-style: oblique` without a provided angle. Angles from -90 to 13 are generally shown without slant, like `font-style: normal`. See [bug 261283](https://bugs.webkit.org/show_bug.cgi?id=261283) and [bug 174865](https://bugs.webkit.org/show_bug.cgi?id=174865)."
