@@ -1,17 +1,8 @@
-Is it really a partial implementation even? Seems to me they check the angle and make it either `font-style: normal` or `font-style: italic` based on the provided degree. It seems to me Chrome simply doesn't 
+I searched for some bug reports myself and found some... stuff.
 
-
-Sure, it works as in that it doesn't break, but that's nowhere near the intended behaviour. I haven't gotten my Chrome to do anything with any value of `font-synthesis-style`
-
-I did find some additional resources:
-
-An issue created based on CSS Working Group's decision to disallow fallback from oblique to italic and to synthesize oblique when requested: https://issues.chromium.org/issues/393389580
-
-Issue about slanting glyphs to the left not working: https://issues.chromium.org/issues/40065409
-
-w3 tests page, where Gecko passes two of the three tests, while Blink and Webkit fail: http://w3.org/International/i18n-tests/results/int-letterforms.html
-
-Also a bug report Chrome behaves even more weirdly: https://issues.chromium.org/issues/40788851
+- An issue created based on CSS Working Group's decision to disallow fallback from oblique to italic and to synthesize oblique when requested: https://issues.chromium.org/issues/393389580
+- Issue about slanting glyphs to the left not working: https://issues.chromium.org/issues/40065409 with w3 tests page, where Gecko passes two of the three tests, while Blink and Webkit fail: http://w3.org/International/i18n-tests/results/int-letterforms.html
+- Also a bug report Chrome behaves even more weirdly: https://issues.chromium.org/issues/40788851
 
 On the test page provided in that issue: https://output.jsbin.com/juyawoh if I tweak the degrees of the property relevant to the `font-style: oblique -15deg` box followingly:
  - the default value of -15 that's set on the page slants all characters to the left, as well as does any negative value from -90 to -1
@@ -21,3 +12,7 @@ On the test page provided in that issue: https://output.jsbin.com/juyawoh if I t
  - values from 15 to 90 slant none of the characters
 
 The angle of the slant doesn't vary, it's just left, right or none. In Firefox the logograms are slanted to the degree, while latin characters and arabic numerals seem to become italics.
+
+Anyway... For Chrome and Safari, is it really a partial implementation even? Seems to me they check the angle and make it either `font-style: normal` or `font-style: italic` based on the provided degree. I mean, sure, it doesn't break, but that's nowhere near the intended behaviour.
+
+Also, I'm becoming less and less sure that the people who decide how CSS don't know what they're doing. Oblique and italic are supposed to be two distinct things. https://en.wikipedia.org/wiki/Oblique_type
