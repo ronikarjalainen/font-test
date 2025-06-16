@@ -1,136 +1,16 @@
  <!DOCTYPE html>
 <html>
 <head>
-	<title>Font test: Latin Modern Roman</title>
-	<style>
-@font-face {
-	font-family: 'lmromanreg';
-	url('lmroman10-regular.otf') format("otf"),
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'lmromanreg oblique';
-	url('lmroman10-regular.otf') format("otf"),
-	font-style: oblique;
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'lmromanita';
-	url('lmroman10-italic.otf') format("otf"),
-	font-style: italic;
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'lmromanboldita';
-	url('lmroman10-bolditalic.otf') format("otf"),
-	font-style: italic;
-	font-weight: bold;
-}
-@font-face {
-	font-family: 'lmromanbold';
-	url('lmroman10-bold.otf') format("otf"),
-	font-style: normal;
-	font-weight: bold;
-}
-@font-face {
-	font-family: 'lmromanobl';
-	url('lmromanslant10-regular.otf') format("otf"),
-	font-style: normal;
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'lmromanobl2';
-	url('lmromanslant10-regular.otf') format("otf"),
-	font-style: oblique;
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'lmromanobl3';
-	url('lmromanslant10-bold.otf') format("otf"),
-	font-style: oblique;
-	font-weight: bold;
-}
-body {
-	font-family: 'lmromanreg';
-}
-div {
-	border-style: dotted;
-	width: 400px;
-}
-
-.italic
-{
-	/*font-style: italic;*/
-	font-family: 'lmromanita';
-}
-.italic2
-{
-	font-style: italic;
-	font-family: 'lmromanita';
-}
-.bolditalic
-{
-	font-family: 'lmromanboldita';
-}
-.bold
-{
-	font-family: 'lmromanbold';
-}
-.oblique1a
-{
-	font-synthesis-style: auto;
-	font-style: oblique;
-	font-family: 'lmromanobl';
-}
-.oblique1b
-{
-	font-family: 'lmromanobl';
-}
-.oblique2a
-{
-	font-synthesis-style: auto;
-	font-style: oblique;
-	font-family: 'lmromanobl2';
-}
-.oblique2b
-{
-	font-family: 'lmromanobl2';
-}
-.oblique3
-{
-	font-family: 'lmromanobl3';
-}
-.obliquelmr
-{
-	font-family: 'lmromanreg oblique';
-}
-.obliquep45
-{
-	font-synthesis-style: auto;
-	font-style: oblique 45deg;
-}
-.obliquem45
-{
-	font-synthesis-style: auto;
-	font-style: oblique -45deg;
-}
-	</style>
+	<title>Font tests</title>
 </head>
 <body>
-	<h1>Font test: Latin Modern Roman</h1>
-	<div><p>This is normal text</p></div>
-	<div><p class="italic">This is italic text</p></div>
-	<div><p class="italic2">This is italic text</p></div>
-	<div><p class="bolditalic">This is bold italic text</p></div>
-	<div><p class="bold">This is bold text</p></div>
-	<div><p class="oblique1a">This is oblique text</p></div>
-	<div><p class="oblique1b">This is oblique text</p></div>
-	<div><p class="oblique2a">This is oblique text</p></div>
-	<div><p class="oblique2b">This is oblique text</p></div>
-	<div><p class="oblique3">This is oblique text</p></div>
-	<div><p class="obliquelmr">This is oblique text with mere font-family</p></div>
-	<div><p class="obliquep45">This is oblique text with +45 degree slant</p></div>
-	<div><p class="obliquem45">This is oblique text with -45 degree slant</p></div>
+	<h1>Font tests</h1>
+	<ul>
+		<li>
+			<p><a href="lmr.html">Latin Modern Roman</a></p>
+		</li>
+		<li>
+			<p><a href="hnbc.html">Helvetica Neue Black Condensed</a></p>
+		</li>
+	</ul>
 </body>
-</html> 
