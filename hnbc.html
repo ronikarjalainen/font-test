@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Font test: Helvetica Neue Black Condensed</title>
@@ -12,6 +12,13 @@
 }
 @font-face {
 	font-family: 'hnbc oblique';
+	src: url('helvetica-neue-black-condensed.woff2'), format("woff2");
+	src: url('helvetica-neue-black-condensed.ttf'), format("truetype");
+	font-style: oblique;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'hnbcoblique';
 	src: url('helvetica-neue-black-condensed.woff2'), format("woff2");
 	src: url('helvetica-neue-black-condensed.ttf'), format("truetype");
 	font-style: oblique;
@@ -47,6 +54,10 @@ div {
 {
 	font-family: 'hnbc oblique';
 }
+.obliquehnbc2
+{
+	font-family: 'hnbcoblique';
+}
 	</style>
 </head>
 <body>
@@ -57,5 +68,6 @@ div {
 	<div><p class="obliquep45">This is oblique text with +45 degree slant</p></div>
 	<div><p class="obliquem45">This is oblique text with -45 degree slant</p></div>
 	<div><p class="obliquehnbc">This is oblique text with mere font-family</p></div>
+	<div><p class="obliquehnbc2">This is oblique text with mere font-family</p></div>
 </body>
 </html> 
